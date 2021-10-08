@@ -3,7 +3,7 @@ use rocket::Request;
 use rocket::get;
 
 
-#[derive(serde::Serialize)]
+#[derive(Debug, serde::Serialize)]
 pub struct Response {
     reply: String,
 }

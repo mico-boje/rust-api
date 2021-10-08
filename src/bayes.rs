@@ -1,5 +1,4 @@
 use rocket::serde::json::Json;
-//use rocket::form::Form;
 use serde::{Serialize, Deserialize};
 
 #[derive(Debug, Serialize, Deserialize)]
@@ -10,14 +9,7 @@ pub struct BayesTheorem {
     a_given_b: f64
 }
 
-
-// #[get("/bayes_theorem/<a>/<b>/<pba>")]
-// pub fn bayes_theorem(a: f64, b: f64, pba: f64) -> Json<BayesTheorem> {
-//     let bayes = BayesTheorem {event_a: a, event_b: b, b_given_a: pba, a_given_b: ((pba * a) / b), };
-//     Json(bayes)
-// }
-
-#[derive(Deserialize)]
+#[derive(Debug, Deserialize)]
 pub struct Input {
     event_a: f64,
     event_b: f64,
